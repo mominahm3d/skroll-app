@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Documentation — Skroll</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+    nav {
+      padding: 20px 40px;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -.03em;
+      text-decoration: none;
+      color: #000;
+    }
+    nav a {
+      text-decoration: none;
+      color: #555;
+      font-size: .9rem;
+      margin-left: 24px;
+    }
+    .layout {
+      display: flex;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px;
+      gap: 48px;
+    }
+    .sidebar {
+      width: 200px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 24px;
+      align-self: flex-start;
+    }
+    .sidebar a {
+      display: block;
+      padding: 6px 0;
+      text-decoration: none;
+      color: #555;
+      font-size: .88rem;
+      border-left: 2px solid #eee;
+      padding-left: 12px;
+      margin-bottom: 2px;
+    }
+    .sidebar a:hover { color: #000; border-color: #000; }
+    .sidebar .section-title {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #999;
+      margin: 16px 0 6px;
+    }
+    .content { flex: 1; min-width: 0; padding-bottom: 80px; }
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -.03em;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      color: #666;
+      font-size: 1rem;
+      margin-bottom: 48px;
+    }
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 48px 0 12px;
+      padding-top: 48px;
+      border-top: 1px solid #eee;
+    }
+    h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+    h3 { font-size: 1rem; font-weight: 700; margin: 20px 0 6px; }
+    p { margin-bottom: 12px; color: #333; font-size: .95rem; }
+    ul { margin: 8px 0 12px 20px; color: #333; font-size: .95rem; }
+    ul li { margin-bottom: 6px; }
+    .step {
+      background: #f9f9f9;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .step-num {
+      width: 28px; height: 28px;
+      background: #000;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .8rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .step-text { font-size: .9rem; color: #333; }
+    .step-text strong { color: #000; }
+    .badge {
+      display: inline-block;
+      background: #f0f0f0;
+      color: #333;
+      font-size: .75rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-family: monospace;
+      margin: 2px;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: .9rem; }
+    th { text-align: left; padding: 8px 12px; background: #f9f9f9; font-weight: 600; border-bottom: 2px solid #eee; }
+    td { padding: 8px 12px; border-bottom: 1px solid #f0f0f0; color: #444; }
+    footer {
+      border-top: 1px solid #eee;
+      padding: 32px 40px;
+      text-align: center;
+      font-size: .85rem;
+      color: #999;
+    }
+    footer a { color: #555; text-decoration: none; margin: 0 12px; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">Skroll</a>
+    <div>
+      <a href="docs.html">Docs</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:support@skroll.app">Support</a>
+    </div>
+  </nav>
+
+  <div class="layout">
+
+    <div class="sidebar">
+      <div class="section-title">Getting Started</div>
+      <a href="#install">Installation</a>
+      <a href="#activate">Activation</a>
+
+      <div class="section-title">Settings</div>
+      <a href="#scroll-mode">Scroll Mode</a>
+      <a href="#appearance">Appearance</a>
+      <a href="#placement">Placement</a>
+
+      <div class="section-title">Help</div>
+      <a href="#faq">FAQ</a>
+      <a href="#support">Support</a>
+    </div>
+
+    <div class="content">
+
+      <h1>Documentation</h1>
+      <p class="subtitle">Everything you need to set up and customize Skroll on your Shopify store.</p>
+
+      <!-- INSTALL -->
+      <h2 id="install">Installation</h2>
+      <p>Installing Skroll takes less than 2 minutes and requires no coding.</p>
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">Go to the <strong>Shopify App Store</strong> and search for <strong>Skroll</strong> or click the direct install link.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">Click <strong>Add app</strong> and approve the installation on your Shopify store.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">You'll be redirected to the <strong>Skroll dashboard</strong> inside your Shopify admin.</div>
+      </div>
+
+      <!-- ACTIVATE -->
+      <h2 id="activate">Activation</h2>
+      <p>After installing, you need to enable the App Embed in your Theme Editor.</p>
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">In your Shopify admin go to <strong>Online Store → Themes</strong>.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">Click <strong>Customize</strong> on your active theme.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">Click the <strong>App Embeds</strong> icon in the left sidebar (puzzle piece icon at the bottom).</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-text">Find <strong>Skroll</strong> in the list and toggle it <strong>ON</strong>.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-text">Click <strong>Save</strong>. The scroll button will now appear on your storefront.</div>
+      </div>
+
+      <!-- SCROLL MODE -->
+      <h2 id="scroll-mode">Scroll Mode</h2>
+      <p>Skroll offers two scroll modes configurable from the App Embeds settings panel.</p>
+
+      <h3>Auto Scroll</h3>
+      <p>Visitors tap the button once to start continuous smooth scrolling. The button fades slightly while active. Tapping again — or tapping anywhere on the page — stops the scroll. When the bottom of the page is reached, scrolling stops automatically and the button flips to a scroll-to-top arrow.</p>
+
+      <h3>Page Jump</h3>
+      <p>Each tap jumps the page down by a set percentage of the screen height. No continuous scrolling — great for structured content pages where visitors want to skip section by section.</p>
+
+      <table>
+        <tr><th>Setting</th><th>Description</th><th>Default</th></tr>
+        <tr><td>Mode</td><td>Auto Scroll or Page Jump</td><td>Auto Scroll</td></tr>
+        <tr><td>Scroll Speed</td><td>Speed of auto scroll (1-10)</td><td>3</td></tr>
+        <tr><td>Active Fade Opacity</td><td>Button opacity while scrolling</td><td>50%</td></tr>
+        <tr><td>Jump Distance</td><td>% of screen height per jump</td><td>50%</td></tr>
+      </table>
+
+      <!-- APPEARANCE -->
+      <h2 id="appearance">Appearance</h2>
+      <p>All appearance settings are available in the App Embeds panel under Theme Editor.</p>
+
+      <table>
+        <tr><th>Setting</th><th>Description</th></tr>
+        <tr><td>Icon Style</td><td>8 icon designs to choose from</td></tr>
+        <tr><td>Icon Color</td><td>Color of the arrow icon</td></tr>
+        <tr><td>Icon Size</td><td>Size of the icon inside the button (12–36px)</td></tr>
+        <tr><td>Background Color</td><td>Button background color</td></tr>
+        <tr><td>Background Opacity</td><td>Opacity for glass/frosted effect (10–100%)</td></tr>
+        <tr><td>Transparent Background</td><td>Make background fully invisible</td></tr>
+        <tr><td>Button Shape</td><td>Border radius from square (0%) to circle (50%)</td></tr>
+        <tr><td>Button Size</td><td>Overall button size (32–80px)</td></tr>
+        <tr><td>Border</td><td>Toggle border on/off with color, width, opacity</td></tr>
+      </table>
+
+      <!-- PLACEMENT -->
+      <h2 id="placement">Placement</h2>
+
+      <table>
+        <tr><th>Setting</th><th>Description</th></tr>
+        <tr><td>Button Position</td><td>Bottom Right, Bottom Left, Bottom Center, Center Right, Center Left</td></tr>
+        <tr><td>Horizontal Offset</td><td>Distance from left or right edge (0–100px)</td></tr>
+        <tr><td>Vertical Offset</td><td>Distance from top or bottom edge (0–100px)</td></tr>
+        <tr><td>Show On</td><td>Entire Store, Home Page, Product Pages, or Collection Pages</td></tr>
+        <tr><td>Mobile Behavior</td><td>Show or hide on mobile devices</td></tr>
+      </table>
+
+      <!-- FAQ -->
+      <h2 id="faq">FAQ</h2>
+
+      <h3>The button isn't showing on my store</h3>
+      <p>Make sure you've enabled the App Embed in Theme Editor → App Embeds → Skroll → ON, and clicked Save. Also check that "Enable Skroll button" is checked in the settings panel.</p>
+
+      <h3>Will Skroll slow down my store?</h3>
+      <p>No. The Skroll script is under 2KB, loads with <span class="badge">defer</span> (non-blocking), uses zero external libraries, and has no effect on your page speed score.</p>
+
+      <h3>Does it work on all Shopify themes?</h3>
+      <p>Yes. Skroll uses a Theme App Extension which is compatible with all Shopify 2.0 themes and is fully supported by Shopify's platform.</p>
+
+      <h3>Can I show the button only on certain pages?</h3>
+      <p>Yes — use the <strong>Show On</strong> setting to limit the button to your entire store, home page only, product pages only, or collection pages only.</p>
+
+      <h3>How do I uninstall Skroll?</h3>
+      <p>Go to your Shopify Admin → Apps → Skroll → Delete. All app data is permanently removed within 48 hours of uninstallation.</p>
+
+      <!-- SUPPORT -->
+      <h2 id="support">Support</h2>
+      <p>Need help? We typically respond within 24 hours.</p>
+      <ul>
+        <li>Email: <a href="mailto:support@skroll.app">support@skroll.app</a></li>
+      </ul>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Skroll. All rights reserved.</p>
+    <p style="margin-top:8px">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="docs.html">Documentation</a>
+      <a href="mailto:support@skroll.app">Contact</a>
+    </p>
+  </footer>
+
+</body>
+</html>
